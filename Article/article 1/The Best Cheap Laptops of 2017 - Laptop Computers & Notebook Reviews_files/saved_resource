@@ -1,0 +1,14 @@
+/**/ this.facebookCallback({
+   "og_object": {
+      "id": "1321789887892294",
+      "description": "If you need a new laptop, but don't have a ton to spend, we have 10 winners for less than $500, along with some free shopping advice.",
+      "title": "The Best Cheap Laptops of 2017",
+      "type": "article",
+      "updated_time": "2017-03-08T15:32:07+0000"
+   },
+   "share": {
+      "comment_count": 0,
+      "share_count": 3
+   },
+   "id": "http://in.pcmag.com/laptops/68789/guide/the-best-cheap-laptops-of-2017"
+});

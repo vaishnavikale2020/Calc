@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0495)https://ssl.connextra.com/servlet/controller?service=DDM_TrebleOdds_300x250&pubhost=www.digit.in&tclk=http%3A%2F%2Fpixel.mathtag.com%2Fclick%2Fimg%3Fmt_aid%3D62912451666804611%26mt_id%3D3556006%26mt_adid%3D117751%26mt_sid%3D2027144%26mt_exid%3D20%26mt_inapp%3D0%26mt_uuid%3Dd2e75869-399e-4500-b202-d10b416d07db%26mt_3pck%3D%255BCLICK_URL%255D%26mt_lp%3Dhttps%253A%2F%2Fwww.matchbook.com%2F%26redirect%3D&mmid=303530.2027144&client=Matchbook&placement=DDM_TrebleOdds_300x250&_cb=62912451666804611 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" defer="" src="./load3.js.download"></script>
+
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>300x250_Horse Racing Double Odds Offer</title>
+
+<script src="./createjs-2015.11.26.min.js.download"></script>
+<script src="./300x250_Horse_Racing_Double_Odds_Offer.js.download"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	handleComplete();
+}
+function handleComplete() {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	exportRoot = new lib._300x250_HorseRacingDoubleOddsOffer();
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
+			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	}
+	makeResponsive(true,'both',false,1);	
+	fnStartAnimation();
+}
+</script>
+
+<meta name="ad.size" content="width=300,height=250">
+<script src="./Enabler.js.download"></script>
+
+</head>
+<body onload="init();" style="margin:0px;">
+
+	<a href="https://ssl.connextra.com/c/u,http%253A%252F%252Fwlmatchbook.adsrv.eacdn.com%252Fwl%252Fclk%253Fbtag%253Da_2431b_2834%2526aid%253D/c,Matchbook/p,DDM_TrebleOdds_300x250/a,DDM_TrebleOdds_300x250/t,http%253A%252F%252Fpixel.mathtag.com%252Fclick%252Fimg%253Fmt_aid%253D62912451666804611%2526mt_id%253D3556006%2526mt_adid%253D117751%2526mt_sid%253D2027144%2526mt_exid%253D20%2526mt_inapp%253D0%2526mt_uuid%253Dd2e75869-399e-4500-b202-d10b416d07db%2526mt_3pck%253D%25255BCLICK_URL%25255D%2526mt_lp%253Dhttps%25253A%252F%252Fwww.matchbook.com%252F%2526redirect%253D" target="_blank">
+
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:300px; height:250px">
+		<canvas id="canvas" width="450" height="375" style="position: absolute; display: block; background-color: rgb(255, 255, 255); width: 300px; height: 250px;"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:300px; height:250px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+	</a>
+
+<script>document.write("<img src='https://pixel.mathtag.com/event/img?mt_id=1135789&amp;mt_adid=117751&amp;v1=&amp;v2=&amp;v3=&amp;s1=&amp;s2=&amp;s3=' width=0 height=0 alt=''>");</script><img src="./img(1)" width="0" height="0" alt=""></body></html>

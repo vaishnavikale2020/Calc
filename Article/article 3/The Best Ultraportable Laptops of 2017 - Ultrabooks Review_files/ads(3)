@@ -1,0 +1,39 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = {}; 
+google_ad.n = 1; 
+google_ad.type = "image"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=CPdXlPZ7JWNeEJs3WtgeitLMIy76Av0fGotWRmALAjbcBEAEgnLHuHmC7zrqD0AqgAeKM4_YDyAECqAMBqgSXAU_Qgo2g2Hh-aTb2TFMjAcTuaTUqiY6l3WEE5joAxCeEiEoLvogLzN2QHzdSY5GxDj6XOtM_Ap_lWBz9VO__fF-9RTC4X6FwdPBOh8BzQofEBz5PreJH2tpOr7RrfdngHVrLUiyE0TyGGs_5TeFONNilrLyCT2cpY4T27SigF1ejP9kMCP9aZL0BKbNLigQPsz5xtMURqRWgBgKAB4bznAmoB6a-G9gHAdIIBQiAYRAB2BML&amp;num=1&amp;cid=CAASEuRozpe47iITwAyRXu3GBB_Niw&amp;sig=AOD64_3q7ZBQHQf31sn3QBz4hNMBBzzJMg&amp;client=ca-gaana_site_js&amp;adurl=http://www.grammarly.com/%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Ddco%26utm_content%3D75119290206%26utm_term%3D%26matchtype%3D%26placement%3Dtimesofindia.indiatimes.com%26network%3Dd"; 
+google_ad.visible_url = "www.grammarly.com"; 
+google_ad.p_creative_view_url = "";
+google_ad.p_engaged_view_url = "";
+google_ad.p_videoplaytime_25_url = "";
+google_ad.p_videoplaytime_50_url = "";
+google_ad.p_videoplaytime_75_url = "";
+google_ad.p_videoplaytime_100_url = "";
+google_ad.log_info = "Bzn0WPZ7JWNeEJs3WtgeitLMIAMai1ZGYAgAAEAE4AcgBAqAGAtIIBQiAYRABwhMGGOKM4_YD";
+google_ad.activeview_cid = "CAASFeRozpe47iITwAyRXu3GBB_NizzSLw";
+google_ad.activeview_js_immediate_enabled = "true";
+google_ad.activeview_metadata = "la=0&";
+google_ad.image_url = "https://tpc.googlesyndication.com/daca_images/simgad/12366951079419853542";
+google_ad.image_width = "970";
+google_ad.image_height = "90";
+google_ad.image_alt_text = "";
+google_ads[0] = google_ad; 
+google_info.feedback_url = "https://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://timesofindia.indiatimes.com/%26gl%3DGB%26hl%3Den%26client%3Dca-gaana_site_js%26ai0%3DCPdXlPZ7JWNeEJs3WtgeitLMIy76Av0fGotWRmALAjbcBEAEgnLHuHmC7zrqD0AqgAeKM4_YDyAECqAMBqgSXAU_Qgo2g2Hh-aTb2TFMjAcTuaTUqiY6l3WEE5joAxCeEiEoLvogLzN2QHzdSY5GxDj6XOtM_Ap_lWBz9VO__fF-9RTC4X6FwdPBOh8BzQofEBz5PreJH2tpOr7RrfdngHVrLUiyE0TyGGs_5TeFONNilrLyCT2cpY4T27SigF1ejP9kMCP9aZL0BKbNLigQPsz5xtMURqRWgBgKAB4bznAmoB6a-G9gHAdIIBQiAYRAB2BML\x26usg\x3dAFQjCNHFCHZTM78U1bSwl0izPycBM4WY0A";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

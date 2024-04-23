@@ -1,0 +1,60 @@
+window.onload = function() {
+	CustomWiggle.create("Wiggle.random4", {wiggles:70, type:"random"});
+	CustomWiggle.create("Wiggle.easeInOut", {wiggles:10, type:"easeInOut"});
+	CSSPlugin.defaultTransformPerspective = 300; 
+	$(".content").css("visibility", "visible");
+	var vps_tl = new TimelineLite({onComplete:function(){
+		this.restart();
+	}});
+	vps_tl.from(".whiteLayer", .6, {opacity:0,ease: Expo.easeOut},"start")
+	.from(".logo_groot", .6, {y:4, opacity:0,ease: Expo.easeOut},"start+=.2")
+	.to(".logo_groot", .5, {y:40, opacity:0, ease: Back.easeIn, easeParams:[3] },"start+=1")
+	.fromTo('.logo_groot', .5, {clip:"rect(0px 336px 170px 0px)"},{clip:"rect(106px 336px 106px 0px)", ease: Expo.easeOut},"start+=1.42")
+	.to(".whiteLayer", .3, {opacity:0, scale:.95,ease: Expo.easeOut},"start+=1.6")	
+	.from(".logo_corner", .6, {x:10,opacity:0,ease: Expo.easeOut},"start+=1.7")
+	.from(".back", .6, {scale:1.5,ease: Expo.easeOut},"start+=1.7")
+	.from(".servers", .6, {opacity:0,x:40,ease: Expo.easeOut},"start+=1.8")
+	.from(".f1_high_txt_a", .5, {opacity:0,x:-100,ease: Expo.easeOut},"start+=1.8")
+	.from(".f1_high_txt_b", .5, {opacity:0,x:100,ease: Expo.easeOut},"start+=1.9")
+	.from(".f1_rond_wit", .5, {opacity:0,scale:.7,ease: Expo.easeOut},"start+=1.9")
+	.from(".f1_speedrond", .5, {opacity:0,scale:.7, rotation:-720,ease: Expo.easeOut},"start+=2")
+	.from(".f1_speed", .5, {opacity:0,ease: Expo.easeOut},"start+=1.9")
+	.to(".f1_speed", 5, {rotation:10,  ease:"Wiggle.random4",transformOrigin:"52% 46%"},"start+=2")
+	.to(".f1_high_txt_a", .4, {opacity:0,y:-20,ease: Expo.easeOut},"start+=5")
+	.to(".f1_high_txt_b", .4, {opacity:0,y:20,ease: Expo.easeOut},"start+=5")
+	.from(".f2_worldwide_txt", .6, {opacity:0,scale:.5,ease: Expo.easeOut,transformOrigin:"35% 50%"},"start+=5")
+	.to(".f1_speed,.f1_speedrond", .5, {opacity:0,ease: Expo.easeOut},"start+=5")
+	.from(".f2_world", .5, {opacity:0,ease: Expo.easeOut},"start+=5")
+	.to(".f2_world", 3, {rotation:-16,x:-4,ease: Linear.easeNone,transformOrigin:"50% 50%"},"start+=5")
+	.to(".f2_worldwide_txt,.f1_rond_wit,.f2_world", .5, {y:30,opacity:0,ease: Expo.easeOut},"start+=8")
+	.from(".f3_witblok", .5, {opacity:0, y:-10, ease: Expo.easeOut},"start+=8")
+	.from(".f3_freetrail_txt", .5, {opacity:0, y:-10, ease: Back.easeOut},"start+=8.1")
+	.from(".f3_gbssb_txt,.f3_starting_txt", .5, {opacity:0, y:-10, ease: Expo.easeOut},"start+=8.2")
+	.from(".f3_prijs_txt", .4, {opacity:0, scale:1.5, ease: Back.easeOut,transformOrigin:"35% 55%"},"start+=8.2")
+	.from(".orangeBut", .4, {opacity:0, scale:1.4,ease: Back.easeOut},"start+=2")
+	.to(".orangeBut", 1, {rotation:5, ease:"Wiggle.easeInOut"},"start+=10")	
+	.fromTo(".greenLayer", .5, {y:400, opacity:0}, {y:0, opacity:1,ease: Expo.easeInOut},"start+=13")
+	;
+	//vps_tl.pause(6)
+	$( ".orangeBut" ).hover(
+        function() {
+  			TweenLite.fromTo('#butText', .3,{x:0}, {x:20,  ease:Strong.easeOut});
+  			TweenLite.fromTo('.butBackDark', .3,{x:0, width:34}, {x:34, width:0, ease:Strong.easeOut});
+  			TweenLite.fromTo('#arrow', .3,{opacity:1,x:0}, {opacity:0,x:10, ease:Strong.easeOut});
+  			TweenLite.fromTo('#arrow2', .5,{opacity:0,x:-10}, {opacity:1,x:30, ease:Strong.easeOut});
+
+        }, function() {
+        	TweenLite.fromTo('#butText', .3,{x:20}, {x:0,  ease:Strong.easeOut});
+        	TweenLite.fromTo('.butBackDark', .3,{x:34, width:0}, {x:0, width:34, ease:Strong.easeOut});
+        	TweenLite.fromTo('#arrow', .3,{opacity:0,x:10}, {opacity:1,x:0, ease:Strong.easeOut});
+        	TweenLite.fromTo('#arrow2', .3,{opacity:1,x:30}, {opacity:0,x:-4, ease:Strong.easeOut});
+        }
+      );
+	function setPaused(){
+		vps_tl.pause(6);
+	}
+	setTimeout(setPaused, 24000);
+	$( ".butlayer,.orangeBut" ).click(function() {
+  		window.open(clickTag, '_blank');
+	});
+}

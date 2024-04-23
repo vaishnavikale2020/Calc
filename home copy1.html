@@ -1,0 +1,313 @@
+<html>
+<head><title>LAPY SHOP</title></head>
+<body>
+	<link rel="stylesheet" type="text/css" href="ankit.css">
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <div class="top_nav">
+        <a href="home.html"><img src="logo.png" width="200px" height="70px"></a>
+        <div id="right">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Brands</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="hp.html">HP</a>
+    <a href="asus.html">Asus</a>
+    <a href="dell.html">Dell</a>
+    <a href="lenovo.html">Lenovo</a>
+    <a href="apple.html">Apple</a>
+  </div>
+</div>
+</ul>
+        </div>
+    </div>
+
+	<div class="slideshow-container">
+        <div class="mySlides fade">
+            <a href="dell.html"><img src="slideshow/alien.jpg" width="1349px" height="571px"></a>
+        </div>
+        <div class="mySlides fade">
+            <a href="hp.html"><img src="slideshow/hp.jpg" width="1349px" height="571px"></a>
+        </div>
+        <div class="mySlides fade">
+            <a href="dell.html"><img src="slideshow/dell.jpg" width="1349px" height="571px"></a>
+        </div>
+        <div class="mySlides fade">
+            <a href="lenovo.html"><img src="slideshow/lenovo.jpg" width="1349px" height="571px"></a>
+        </div>
+
+        <div id="prev">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        </div>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+<div class="container">
+    <nav>
+        <fieldset style=" padding: 20px;">
+            <legend style="font-size: 20px;"><b>Popular Articles</b></legend>
+            <a href="Article\article 4\Wikileaks documents_ Here's how the CIA was hacking your smart devices _ Digit.in.html"><img src="article/img4.jpg" width="270px" height="270px"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="Article\article 5\TAG Heuer announces $1,650 modular smartwatch based on Android Wear 2.0 _ Digit.in.html"><img src="article/img5.jpg" width="270px" height="270px"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="Article\article 6\A look at the technology behind the new TaMo RaceMo _ Digit.in.html"><img src="article/img6.jpg" width="270px" height="270px"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="Article\article 7\Nokia 7 and Nokia 8 with Snapdragon 660 SoC rumoured to launch in May _ Digit.in.html"><img src="article/img7.jpg" width="270px" height="270px"></a>
+        </fieldset>
+    </nav>
+
+    <section>
+        <fieldset>
+            <legend style="font-size: 20px;"><b>Related Articles</b></legend>
+            <br>
+            <div id="sec_left">
+                <img src="article/img1.jpg" width="150px" height="100px"></img>
+            </div>
+            <div id="sec_right">
+                <a href="Article\article 1\The Best Cheap Laptops of 2017 - Laptop Computers & Notebook Reviews.html"><h4 style="color: #0982d0;">The Best Cheap Laptops of 2017</h4></a>
+                <p style="color: #a0a0a0;">You dont have to spend a fortune-even a small one-on your next PC. If you need a laptop for basic computing, these some of our top performers, and most of them ring up for less than $300.</p><br>
+            </div>
+            <hr width="70%">
+            <br>
+            <div id="sec_left">
+                <img src="article/img2.jpg" width="150px" height="120px"></img>
+            </div>
+            <div id="sec_right">
+                <a href="Article\article 2\The Best Gaming Laptops of 2017 - Laptop Computers & Notebook Reviews.html"><h4 style="color: #0982d0;">The Best Gamming Laptops of 2017</h4></a>
+                <p style="color: #a0a0a0;">Faster processors and exciting new graphics technologies (like Nvidia's Pascal) have made today's gamming laptops almost as powerful as desktops. Here's what you need to know when shopping for your next portable powerhouse.</p><br>
+            </div>
+            <hr width="70%">
+            <br>
+            <div id="sec_left">
+                <img src="article/img3.jpg" width="150px" height="120px"></img>
+            </div>
+            <div id="sec_right">
+                <a href="Article\article 3\The Best Ultraportable Laptops of 2017 - Ultrabooks Review.html"><h4 style="color: #0982d0;">The Best Ultraportable Laptops of 2017</h4></a>
+                <p style="color: #a0a0a0;">Today's ultraportables are as powerful as they are easy to carry with you anywhere. Read our buying advice and top recommendations for these stylish, power-efficient laptops.</p><br>
+            </div>
+            <hr width="70%">
+            <br>
+        </fieldset>
+    </section>
+
+    <aside>
+        <form name="pc" onsubmit="return validateForm()" method="post" class="form">
+            <fieldset>
+            <legend style="font-size: 20px;"><b>Get your own Assembled PC now!</b></legend>
+            <br><br>
+            <label for="motherboard">Motherboard</label><br>
+            <select id="motherboard" name="motherboard">
+                <option value="--select--">--Select--</option>
+                <option value="gigabyte">Gigabyte</option>
+                <option value="asus">Asus</option>
+                <option value="zebronics">Zebronics</option>
+                <option value="intel">Intel</option>
+            </select><br><br>
+
+            <label for="ram">RAM</label><br>
+            <select id="ram" name="ram">
+                <option value="--select--">--Select--</option>
+                <option value="4gb">4 GB</option>
+                <option value="8gb">8 GB</option>
+                <option value="16gb">16 GB</option>
+            </select><br><br>
+
+            <label for="processor">Processor</label><br>
+            <select id="processor" name="processor">
+                <option value="--select--">--Select--</option>
+                <option value="pentium">Intel Pentium</option>
+                <option value="dual">Intel Dual Core</option>
+                <option value="atom">Intel Atom</option>
+                <option value="iseries">Intel i-Series</option>
+                <option value="atom">Intel Celeron</option>
+            </select><br><br>
+
+            <label for="graphics">Graphics Card</label><br>
+            <select id="graphics" name="graphics">
+                <option value="--select--">--Select--</option>
+                <option value="nvidia">Nvidia Geforce</option>
+                <option value="amd">AMD Radon</option>
+            </select><br><br>
+
+            <label for="power">Power Supply</label><br>
+            <select id="power" name="power">
+                <option value="--select--">--Select--</option>
+                <option value="20pin">20 Pin</option>
+                <option value="24pin">20+4 Pin</option>
+            </select><br><br>
+
+            <label for="chasis">Chasis</label><br>
+            <select id="chasis" name="chasis">
+                <option value="--select--">--Select--</option>
+                <option value="full">Full Tower</option>
+                <option value="mini">Mini Tower</option>
+                <option value="mid">Mid Tower</option>
+                <option value="slim">Slim Tower</option>
+                <option value="small">Small Form Tower</option>
+            </select><br><br>
+  
+            <input type="submit" value="Submit">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="reset" value="Reset"><br><br>
+            <h4 style="text-align:left;">Estimate costing:</h4>
+            <p style="text-align:left;" id="total">&nbsp</p>
+        </fieldset>
+        </form>
+    </aside>
+
+</div>
+
+    <script type="text/javascript">
+
+    var a = 1;
+    showSlides(a);
+    slide();
+
+    function plusSlides(n) {
+    showSlides(a += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(a = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {a = 1}    
+      if (n < 1) {a = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+    slides[a-1].style.display = "block";  
+    }
+
+    function slide() {
+    var j;
+    var slides = document.getElementsByClassName("mySlides");
+    for (j = 0; j < slides.length; j++) {
+       slides[j].style.display = "none";  
+    }
+    a++;
+    if (a> slides.length) {a = 1}    
+    slides[a-1].style.display = "block";  
+    setTimeout(slide, 3000);
+    }
+
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+
+function validateForm() {
+    var i;
+    var sum=0;
+    for(i=0; i<=6; i++){
+    var x = document.forms["pc"][i].value;
+     if (x == "--select--") {
+        alert("Name must be filled out");
+        break;
+    }
+    else{
+        if(x=="gigabyte"){
+            sum=sum+2650;
+        }
+        if(x=="asus"){
+            sum=sum+2575;
+        }
+        if(x=="zebronics"){
+            sum=sum+2123;
+        }
+        if(x=="intel"){
+            sum=sum+1665;
+        }
+        if(x=="4gb"){
+            sum=sum+2299;
+        }
+        if(x=="8gb"){
+            sum=sum+4297;
+        }
+        if(x=="16gb"){
+            sum=sum+7620;
+        }
+        if(x=="pentium"){
+            sum=sum+5570;
+        }
+        if(x=="dual"){
+            sum=sum+4990;
+        }
+        if(x=="atom"){
+            sum=sum+3000;
+        }
+        if(x=="iseries"){
+            sum=sum+6399;
+        }
+        if(x=="celeron"){
+            sum=sum+4200;
+        }
+        if(x=="nvidia"){
+            sum=sum+3670;
+        }
+        if(x=="amd"){
+            sum=sum+3075;
+        }
+        if(x=="20pin"){
+            sum=sum+450;
+        }
+        if(x=="24pin"){
+            sum=sum+590;
+        }
+        if(x=="full"){
+            sum=sum+1149;
+        }
+        if(x=="mini"){
+            sum=sum+1300;
+        }
+        if(x=="mid"){
+            sum=sum+1149;
+        }
+        if(x=="slim"){
+            sum=sum+2200;
+        }
+        if(x=="small"){
+            sum=sum+1700;
+        }
+        document.getElementById('total').innerHTML= 'Rs.'+sum+' only<br><br>For more details contact us: 9665551646';
+    }
+}
+return false;
+}
+
+    </script>
+</body>
+</html>

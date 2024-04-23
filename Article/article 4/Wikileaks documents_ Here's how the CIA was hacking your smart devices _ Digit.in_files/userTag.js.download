@@ -1,0 +1,452 @@
+var unlp="https://call.nlpcaptcha.in/";var inp = "index.php/";var hnp = "humanity/";var jsname='userTag.js';
+var unp='humanIndex/logHiMouseData/';var js2name='simpli5d.js';var dnp='humanIndex/logDeviceData/';var hpoturl='nlpgo/nlpcall/moneyfy/';
+var noon=4;var cookpoturl='index.php/nlpget/catch/';
+var parmx=screen.width/noon;
+var parmy=screen.height/noon;
+var gridp=0;
+var pos_mouse='';
+var windowfocus=false;
+var configuration={
+	'script':3,
+	'link':2,
+	'img':4,
+	'xmlhttprequest':5,
+	'iframe':6,
+	'css':7
+};
+var headmaster=document.getElementsByTagName('head')[0];
+var bodymaster=document.getElementsByTagName('body')[0];
+if(typeof(tagOptions1)==='undefined' && typeof(NLPTagOptions)!=='undefined'){
+	if(NLPTagOptions.md1==1){
+		var tagOptions1=NLPTagOptions;
+	}else{
+		var tagOptions1=[];
+		var optionIndex=0;
+		tagOptions1[optionIndex++]=NLPTagOptions;
+	}
+}else if(typeof(NLPTagOptions)!=='undefined'){
+	if(NLPTagOptions.md1!=1 ){
+		tagOptions1[optionIndex++]=NLPTagOptions;
+	}
+}
+var Base64 = {
+		// private property
+		_keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+		// public method for encoding
+		encode : function (input) {
+			var output = "";
+			var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+			var i = 0;
+			input = Base64._utf8_encode(input);
+			while (i < input.length) {
+				chr1 = input.charCodeAt(i++);
+				chr2 = input.charCodeAt(i++);
+				chr3 = input.charCodeAt(i++);
+				enc1 = chr1 >> 2;
+				enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+				enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+				enc4 = chr3 & 63;
+				if (isNaN(chr2)) {
+					enc3 = enc4 = 64;
+				} else if (isNaN(chr3)) {
+					enc4 = 64;
+				}
+				output = output +
+				this._keyStr.charAt(enc1) + this._keyStr.charAt(enc2) +
+				this._keyStr.charAt(enc3) + this._keyStr.charAt(enc4);
+			}
+			return output;
+		},
+		// public method for decoding
+		decode : function (input) {
+			var output = "";
+			var chr1, chr2, chr3;
+			var enc1, enc2, enc3, enc4;
+			var i = 0;
+			input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+			while (i < input.length) {
+				enc1 = this._keyStr.indexOf(input.charAt(i++));
+				enc2 = this._keyStr.indexOf(input.charAt(i++));
+				enc3 = this._keyStr.indexOf(input.charAt(i++));
+				enc4 = this._keyStr.indexOf(input.charAt(i++));
+				chr1 = (enc1 << 2) | (enc2 >> 4);
+				chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+				chr3 = ((enc3 & 3) << 6) | enc4;
+				output = output + String.fromCharCode(chr1);
+				if (enc3 != 64) {
+					output = output + String.fromCharCode(chr2);
+				}
+				if (enc4 != 64) {
+					output = output + String.fromCharCode(chr3);
+				}
+			}
+			output = Base64._utf8_decode(output);
+			return output;
+		},
+		// private method for UTF-8 encoding
+		_utf8_encode : function (string) {
+			string = string.replace(/\r\n/g,"\n");
+			var utftext = "";
+			for (var n = 0; n < string.length; n++) {
+				var c = string.charCodeAt(n);
+				if (c < 128) {
+					utftext += String.fromCharCode(c);
+				}
+				else if((c > 127) && (c < 2048)) {
+					utftext += String.fromCharCode((c >> 6) | 192);
+					utftext += String.fromCharCode((c & 63) | 128);
+				}
+				else {
+					utftext += String.fromCharCode((c >> 12) | 224);
+					utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+					utftext += String.fromCharCode((c & 63) | 128);
+				}
+			}
+			return utftext;
+		},
+		// private method for UTF-8 decoding
+		_utf8_decode : function (utftext) {
+			var string = "";
+			var i = 0;
+			var c = c1 = c2 = 0;
+			while ( i < utftext.length ) {
+				c = utftext.charCodeAt(i);
+				if (c < 128) {
+					string += String.fromCharCode(c);
+					i++;
+				}
+				else if((c > 191) && (c < 224)) {
+					c2 = utftext.charCodeAt(i+1);
+					string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+					i += 2;
+				}
+				else {
+					c2 = utftext.charCodeAt(i+1);
+					c3 = utftext.charCodeAt(i+2);
+					string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+					i += 3;
+				}
+			}
+			return string;
+		}
+};
+
+function jperFire(opts,params){
+	if(params.length > 0){
+		var scar=document.createElement('SCRIPT');
+		var data={};
+		data['tagOpts']=opts;
+		data['data']=params;
+		data=Base64.encode(JSON.stringify(data));
+		var d = new Date();
+		var n = d.getTime();
+		var api_url=unlp+inp+unp+n+'/';
+		scar.setAttribute('src',api_url+data);
+		headmaster.appendChild(scar);
+	}
+}
+var fingerPrintDataPub={};
+
+var FingerPrintPub={
+	fpdata:[],
+	logDeviceData:function(){
+		try{
+		var property = Array('text-decoration-color','text-justify','text-orientation','nav-index');
+		// this.fpdata.push(this.tagOpts.key);
+		for (var i = 0; i < property.length; i++) {
+			try{
+				this.fpdata['CSSSupportedProperties_'+property[i].replace('-','_').replace('-','_').replace(',',' ')]=property[i] in document.body.style ?1:0;
+			}catch(e){
+			}
+		}
+		try{
+			this.fpdata.push(navigator.platform.replace('-','_').replace(',',' '));
+		}catch(e){}
+		try{
+			this.fpdata.push(navigator.userAgent.replace('-','_').replace(',',' '));
+		}catch(e){}
+		var plugins='';
+		for (var i = 0; i < navigator.plugins.length; i++) {
+			try{
+				plugins+=navigator.plugins[i].name.replace('-','_').replace(',',' ')+'-';
+			}catch(e){}
+		}
+		try{
+			this.fpdata.push(plugins);
+		}catch(e){}
+		try{
+			this.fpdata.push(navigator.vendor.replace('-','_').replace(',',' '));
+		}catch(e){}
+
+		// var languages='';
+		// for (var i = 0; i < navigator.languages.length; i++) {
+		// 	try{
+		// 		languages+=navigator.languages[i].replace('-','_').replace(',',' ')+'-';
+		// 	}catch(e){}
+		// }
+		// try{
+		// 	this.fpdata.push(languages);
+		// }catch(e){}
+		// var mediaDevices='';
+		// for (var i = 0; i < navigator.mediaDevices.length; i++) {
+		// 	try{
+		// 		mediaDevices+=navigator.mediaDevices[i].replace('-','_').replace(',',' ')+'-';
+		// 	}catch(e){}
+		// }
+		// try{
+		// 	this.fpdata.push(mediaDevices);
+		// }catch(e){}
+		try{
+			this.fpdata.push(navigator.appVersion);
+		}catch(e){}
+		try{
+			this.fpdata.push(navigator.cookieEnabled==1?1:0);
+		}catch(e){}
+		try{
+			this.fpdata.push(navigator.doNotTrack==1?1:0);
+		}catch(e){}
+		// try{
+		// 	this.fpdata.push(navigator.language.replace('-','_').replace(',',' '));
+		// }catch(e){}
+		// var mimeTypes='';
+		// for (var i = 0; i < navigator.mimeTypes.length; i++) {
+		// 	try{
+		// 		mimeTypes+=navigator.mimeTypes[i].type.replace('-','_').replace(',',' ')+'-';
+		// 	}catch(e){}
+		// }
+		try{
+			this.fpdata.push(mimeTypes);
+		}catch(e){}
+		try{
+			this.fpdata.push(navigator.product.replace('-','_').replace(',',' '));
+		}catch(e){}
+		try{
+			this.fpdata.push(navigator.productSub);
+		}catch(e){}
+		try{
+			this.fpdata.push(screen.availHeight);
+		}catch(e){}
+		try{
+			this.fpdata.push(screen.availWidth);
+		}catch(e){}
+		try{
+			this.fpdata.push(screen.colorDepth);
+		}catch(e){}
+		try{
+			this.fpdata.push(screen.pixelDepth);
+		}catch(e){}
+		try{
+			this.fpdata.push(screen.orientation.type.replace('-','_').replace(',',' '));
+		}catch(e){}
+		try{
+			this.fpdata.push(screen.orientation.angle);
+		}catch(e){}
+		try{
+			this.fpdata.push(screen.width);
+		}catch(e){}
+		try{
+			this.fpdata.push(screen.height);
+		}catch(e){}
+		try{
+			this.fpdata.push(screen.availTop);
+		}catch(e){}
+
+		try{
+			this.fpdata.push(((typeof navigator.plugins !== "undefined" && typeof navigator.plugins["Shockwave Flash"] === "object") || (window.ActiveXObject && (new ActiveXObject("ShockwaveFlash.ShockwaveFlash")) !== false))?1:0);
+		}catch(e){}
+		var canvas=document.createElement('canvas');
+		if(canvas.getContext('2d') || canvas.getContext){
+			try{
+				this.fpdata.push(1);
+			}catch(e){}
+		}else{
+	       try{
+	       	this.fpdata.push(0);
+	       }catch(e){}
+	    }	
+	    if(navigator.userAgent.indexOf('Chrome')!=-1){
+	    	try{
+	    		this.fpdata.push('Chrome');
+	    	}catch(e){}
+	    }else if(navigator.userAgent.indexOf('Opera')!=-1){
+	    	try{
+	    		this.fpdata.push('Opera');
+	    	}catch(e){}
+	    }else if(navigator.userAgent.indexOf('MSIE')!=-1){
+	    	try{
+	    		this.fpdata.push('Microsoft Internet Explorer');
+	    	}catch(e){}
+	    }else if(navigator.userAgent.indexOf('Safari')!=-1){
+	    	try{
+	    		this.fpdata.push('Safari');
+	    	}catch(e){}
+	    }else if(navigator.userAgent.indexOf('Firefox')!=-1){
+	    	try{
+	    		this.fpdata.push('Firefox');
+	    	}catch(e){}
+	    }
+		try{
+			this.fpdata.push(new Date().getTimezoneOffset());
+		}catch(e){}
+		try{
+			this.fpdata.push(!!window.localStorage?1:0);
+		}catch(e){}
+		try{
+			this.fpdata.push(!!window.sessionStorage?1:0);
+		}catch(e){}
+		try{
+			this.fpdata.push(!!window.indexDB?1:0);
+		}catch(e){}
+		try{
+			this.fpdata.push(!!window.webSQL?1:0);
+		}catch(e){}
+		//this.fireData(this.fpdata);
+		return this.hashMyStyle(this.fpdata.join('###'));
+		}catch(e){
+			return 9999;
+		}
+	},
+	hashMyStyle:function(key){
+		try{
+		var remainder, bytes, h1, h1b, c1, c2, k1, i;
+		remainder = key.length & 3; // key.length % 4
+		bytes = key.length - remainder;
+		h1 = 31;
+		c1 = 0xcc9e2d51;
+		c2 = 0x1b873593;
+		i = 0;
+		while (i < bytes) {
+			k1 =
+			    ((key.charCodeAt(i) & 0xff)) |
+			    ((key.charCodeAt(++i) & 0xff) << 8) |
+			    ((key.charCodeAt(++i) & 0xff) << 16) |
+			    ((key.charCodeAt(++i) & 0xff) << 24);
+			++i;
+			k1 = ((((k1 & 0xffff) * c1) + ((((k1 >>> 16) * c1) & 0xffff) << 16))) & 0xffffffff;
+			k1 = (k1 << 15) | (k1 >>> 17);
+			k1 = ((((k1 & 0xffff) * c2) + ((((k1 >>> 16) * c2) & 0xffff) << 16))) & 0xffffffff;
+			h1 ^= k1;
+			    h1 = (h1 << 13) | (h1 >>> 19);
+			h1b = ((((h1 & 0xffff) * 5) + ((((h1 >>> 16) * 5) & 0xffff) << 16))) & 0xffffffff;
+			h1 = (((h1b & 0xffff) + 0x6b64) + ((((h1b >>> 16) + 0xe654) & 0xffff) << 16));
+		}
+		k1 = 0;
+		switch (remainder) {
+			case 3: k1 ^= (key.charCodeAt(i + 2) & 0xff) << 16;
+			case 2: k1 ^= (key.charCodeAt(i + 1) & 0xff) << 8;
+			case 1: k1 ^= (key.charCodeAt(i) & 0xff);
+			k1 = (((k1 & 0xffff) * c1) + ((((k1 >>> 16) * c1) & 0xffff) << 16)) & 0xffffffff;
+			k1 = (k1 << 15) | (k1 >>> 17);
+			k1 = (((k1 & 0xffff) * c2) + ((((k1 >>> 16) * c2) & 0xffff) << 16)) & 0xffffffff;
+			h1 ^= k1;
+		}
+		h1 ^= key.length;
+		h1 ^= h1 >>> 16;
+		h1 = (((h1 & 0xffff) * 0x85ebca6b) + ((((h1 >>> 16) * 0x85ebca6b) & 0xffff) << 16)) & 0xffffffff;
+		h1 ^= h1 >>> 13;
+		h1 = ((((h1 & 0xffff) * 0xc2b2ae35) + ((((h1 >>> 16) * 0xc2b2ae35) & 0xffff) << 16))) & 0xffffffff;
+		h1 ^= h1 >>> 16;
+		return h1 >>> 0;
+		}catch(e){
+			return 9999;
+		}
+	}
+}
+
+function fireSome(tagOpts){
+	//firing http pixel
+	var hp=tagOpts;
+	var fp=FingerPrintPub.logDeviceData();
+	hp.NLPbot=0;
+	try{
+		if(window.location.href.indexOf('NLPBot')!=-1){
+			hp.NLPbot=1;
+		}
+	}catch(e){
+		
+	}
+	hp.dfp=fp;
+	hp.rl=encodeURIComponent(window.location.href);
+	var tkn=new Date().getTime();
+	var hpot=document.createElement('a');
+	var cookpot=document.createElement('SCRIPT');
+	var sessionOpts={};
+	sessionOpts['s']=0;
+	hpot.setAttribute('href',unlp+hpoturl+tkn+'/usr'+'?opt='+Base64.encode(JSON.stringify(hp)));
+	bodymaster.appendChild(hpot);
+	hp.usp_dt=1;
+	//console.log('http fire');
+	jperFire(hp,'usp_dtsecuredservererrorresponseforjmanipulationoverhoverdetectsystem');
+	var rus=[];
+	var rus_c={};
+	var rus_s='';
+	var resources = window.performance.getEntriesByType('resource');
+	var res_in=1;
+	resources.forEach(function (resource) {
+		var resourceTypeNum = configuration[resource.initiatorType];
+		if((typeof(resourceTypeNum)!=='undefined')&&(resourceTypeNum>0))
+		{
+			rus_s=rus_s+resourceTypeNum+"#";
+		}
+	});
+	hp.usp_dt=2;
+	//console.log('resource fire');
+	jperFire(hp,rus_s);
+	window.addEventListener('blur',function(){
+		windowfocus=true;
+		//console.log('window blurred');
+		hp.usp_dt=3;
+		jperFire(hp,pos_mouse);
+		pos_mouse='';
+	});
+	document.addEventListener('mousemove',function(event){
+		var cmx=event.clientX;
+		var cmy=event.clientY;
+		var xf=parseInt(cmx/parmx);
+		var yf=parseInt(cmy/parmy);
+		yf+=1;
+		var gridc=noon*xf+yf;
+		if(gridp != gridc && !windowfocus){
+			gridp=gridc;
+			if (isNaN(gridc))
+			{
+				gridc = 0;
+			}
+			if(gridc>0)
+			{
+				pos_mouse=pos_mouse+gridc+"@"+new Date().getTime()+"#";
+			}
+			if(pos_mouse.length > 400){
+				//console.log('length mouse fire');
+				hp.usp_dt=3;
+				jperFire(hp,pos_mouse);
+				pos_mouse='';			
+			}
+		}
+	});
+	setInterval(function(){
+		if(!windowfocus && pos_mouse.length > 0){
+			//console.log('calling mouse fire');
+			hp.usp_dt=3;
+			jperFire(hp,pos_mouse);
+			pos_mouse='';
+		}
+	},10000);
+	window.addEventListener('beforeunload',function(){
+		hp.usp_dt=3;
+		jperFire(hp,pos_mouse);
+		pos_mouse='';
+	});
+	cookpot.setAttribute('src',unlp+cookpoturl+tkn+'/usr'+'?s='+sessionOpts['s']+'&opt='+Base64.encode(JSON.stringify(hp)));
+	bodymaster.appendChild(cookpot);
+	// window.addEventListener('scroll',function(){
+	// 	var h = document.documentElement,b = document.body,st = 'scrollTop',sh = 'scrollHeight';
+	// 	fingerPrintData['scrollSpeed']=(h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+	// 	logDeviceData(tagOpts);
+	// });
+};
+document.addEventListener('DOMContentLoaded',function(){
+	if(typeof(tagOptions1)!=='undefined' && tagOptions1.md1==1){
+		fireSome(tagOptions1);
+	}
+});
